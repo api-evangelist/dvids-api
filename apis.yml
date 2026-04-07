@@ -1,9 +1,9 @@
 aid: dvids-api
 name: DVIDS - API
 description: >-
-  The DVIDS API is implemented with JSON over HTTP. Integration is possible from
-  any language that can make an HTTP request and parse JSON responses. This
-  includes PHP, Python, Perl, .NET, Java, and Javascript. 
+  The DVIDS API is implemented with JSON over HTTP. Integration is possible from any
+  language that can make an HTTP request and parse JSON responses. This includes PHP,
+  Python, Perl, .NET, Java, and Javascript.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -19,9 +19,9 @@ apis:
   - aid: dvids-api:dvids-api
     name: DVIDS - API
     description: >-
-      The DVIDS API is implemented with JSON over HTTP. Integration is possible
-      from any language that can make an HTTP request and parse JSON responses.
-      This includes PHP, Python, Perl, .NET, Java, and Javascript. 
+      The DVIDS API is implemented with JSON over HTTP. Integration is possible from
+      any language that can make an HTTP request and parse JSON responses. This includes
+      PHP, Python, Perl, .NET, Java, and Javascript.
     humanURL: ' https://api.dvidshub.net/'
     tags:
       - API
