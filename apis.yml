@@ -8,8 +8,7 @@ type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
+tags: []
 created: '2025-05-02'
 modified: '2026-03-16'
 url: >-
@@ -23,8 +22,7 @@ apis:
       any language that can make an HTTP request and parse JSON responses. This includes
       PHP, Python, Perl, .NET, Java, and Javascript.
     humanURL: ' https://api.dvidshub.net/'
-    tags:
-      - API
+    tags: []
     properties:
       - type: Documentation
         url: ' https://api.dvidshub.net/'
