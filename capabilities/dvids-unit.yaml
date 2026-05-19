@@ -1,0 +1,116 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: DVIDS API — Unit
+  description: 'DVIDS API — Unit. 1 operations. Lead operation: Search units. Self-contained Naftiko capability covering one
+    Dvids Api business surface.'
+  tags:
+  - Dvids Api
+  - Unit
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DVIDS_API_API_KEY: DVIDS_API_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: dvids-unit
+    baseUri: https://api.dvidshub.net
+    description: DVIDS API — Unit business capability. Self-contained, no shared references.
+    resources:
+    - name: unit-search
+      path: /unit/search
+      operations:
+      - name: searchunits
+        method: GET
+        description: Search units
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: api_key
+          in: query
+          type: string
+          required: true
+        - name: unit_id
+          in: query
+          type: integer
+        - name: branch
+          in: query
+          type: string
+        - name: unit_abbrev
+          in: query
+          type: string
+        - name: unit_name
+          in: query
+          type: string
+        - name: max_results
+          in: query
+          type: integer
+        - name: sortdir
+          in: query
+          type: string
+        - name: page
+          in: query
+          type: integer
+    authentication:
+      type: apikey
+      key: api_key
+      value: '{{env.DVIDS_API_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: dvids-unit-rest
+    port: 8080
+    description: REST adapter for DVIDS API — Unit. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/unit/search
+      name: unit-search
+      description: REST surface for unit-search.
+      operations:
+      - method: GET
+        name: searchunits
+        description: Search units
+        call: dvids-unit.searchunits
+        with:
+          api_key: rest.api_key
+          unit_id: rest.unit_id
+          branch: rest.branch
+          unit_abbrev: rest.unit_abbrev
+          unit_name: rest.unit_name
+          max_results: rest.max_results
+          sortdir: rest.sortdir
+          page: rest.page
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: dvids-unit-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for DVIDS API — Unit. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: search-units
+      description: Search units
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: dvids-unit.searchunits
+      with:
+        api_key: tools.api_key
+        unit_id: tools.unit_id
+        branch: tools.branch
+        unit_abbrev: tools.unit_abbrev
+        unit_name: tools.unit_name
+        max_results: tools.max_results
+        sortdir: tools.sortdir
+        page: tools.page
+      outputParameters:
+      - type: object
+        mapping: $.
