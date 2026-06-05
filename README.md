@@ -2,7 +2,7 @@
 
 The Defense Visual Information Distribution Service (DVIDS) API provides programmatic access to over 1.8 million U.S. military news, photos, video, audio, publications, and unit assets. The API is implemented as JSON over HTTP and integration is possible from any language that can make an HTTP request and parse JSON responses.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/dvids-api/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/dvids-api/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/dvids-api/refs/heads/main/apis.yml)
 
 ## Scope
 
@@ -20,7 +20,7 @@ The Defense Visual Information Distribution Service (DVIDS) API provides program
 ## Timestamps
 
 - **Created:** 2025-05-02
-- **Modified:** 2026-04-28
+- **Modified:** 2026-05-19
 
 ## APIs
 
@@ -28,17 +28,25 @@ The Defense Visual Information Distribution Service (DVIDS) API provides program
 
 JSON-over-HTTP API for searching and retrieving DVIDS news, video, image, audio, publication, webcast, graphics, and unit records.
 
-**Human URL:** [https://api.dvidshub.net/](https://api.dvidshub.net/)
+- **Human URL:** [https://api.dvidshub.net/](https://api.dvidshub.net/)
+- **Base URL:** `https://api.dvidshub.net`
 
-**Base URL:** `https://api.dvidshub.net`
+#### Tags
+
+- Media
+- Defense
+- Government
+- Search
 
 #### Properties
 
 - [Documentation](https://api.dvidshub.net/docs)
-- [Asset API](https://api.dvidshub.net/docs/asset_api)
-- [Search API](https://api.dvidshub.net/docs/search_api)
-- [Unit API](https://api.dvidshub.net/docs/unit_api)
-- [OpenAPI](openapi/dvids-api-openapi.yml)
+- [Asset  A P I](https://api.dvidshub.net/docs/asset_api)
+- [Search  A P I](https://api.dvidshub.net/docs/search_api)
+- [Unit  A P I](https://api.dvidshub.net/docs/unit_api)
+- [OpenAPI](openapi/dvids-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/dvids-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/dvids-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
@@ -47,4 +55,5 @@ JSON-over-HTTP API for searching and retrieving DVIDS news, video, image, audio,
 
 ## Maintainers
 
-- **Kin Lane** - kin@apievangelist.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
