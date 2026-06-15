@@ -1,0 +1,419 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DVIDS API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dvidshub.net/search",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "branch",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "categories_exclude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "credit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from_publishdate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to_publishdate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from_duration",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to_duration",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "aspect_ratio",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hd",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_image",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_captions",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max_results",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sortdir",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_width",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_height",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_quality",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Full text search across DVIDS news, video, image, audio, publications, webcasts, and graphics."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Asset",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dvidshub.net/asset",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "prettyprint",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_width",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_height",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_quality",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_related_media",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve extended information about a specific media asset."
+        },
+        {
+          "info": {
+            "name": "Get related assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dvidshub.net/asset/related",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "branch",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "credit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "aspect_ratio",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hd",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max_results",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve media assets related to a specified asset."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Unit",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search units",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dvidshub.net/unit/search",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "branch",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_abbrev",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max_results",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sortdir",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search the DVIDS unit directory by name, abbreviation, branch, or ID."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

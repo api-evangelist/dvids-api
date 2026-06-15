@@ -1,0 +1,1932 @@
+{
+  "item": [
+    {
+      "id": "b468cb49-19c3-46c0-9a58-56076c044900",
+      "name": "Search",
+      "description": {
+        "content": "Full-text search across DVIDS assets",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a5f63576-8a88-42aa-b6b2-a101d401db61",
+          "name": "Search assets",
+          "request": {
+            "name": "Search assets",
+            "description": {
+              "content": "Full text search across DVIDS news, video, image, audio, publications, webcasts, and graphics.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "branch",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "categories_exclude",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "state",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "credit",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "from_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "to_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "from_publishdate",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "to_publishdate",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "from_duration",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "to_duration",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "aspect_ratio",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hd",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_image",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_captions",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max_results",
+                  "value": "50"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sortdir",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumb_width",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumb_height",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumb_quality",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c16234c1-bc00-4866-85a3-56e1246194c7",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories_exclude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "to_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_image",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "has_captions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "50"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"page_info\": {\n    \"total_results\": 5733,\n    \"results_per_page\": 6104\n  },\n  \"results\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"keywords\": \"string\",\n      \"date\": \"string\",\n      \"date_published\": \"string\",\n      \"timestamp\": \"string\",\n      \"branch\": \"string\",\n      \"unit_name\": \"string\",\n      \"image\": \"string\",\n      \"thumbnail\": \"string\",\n      \"url\": \"string\",\n      \"credit\": [\n        {\n          \"key_0\": 1125,\n          \"key_1\": \"string\"\n        },\n        {\n          \"key_0\": \"string\",\n          \"key_1\": false,\n          \"key_2\": 676.9453450841067,\n          \"key_3\": 3978\n        }\n      ],\n      \"location\": {\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"country\": \"string\"\n      },\n      \"rating\": 1951.9330676014035,\n      \"virin\": \"string\",\n      \"duration\": 2788,\n      \"aspect_ratio\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"keywords\": \"string\",\n      \"date\": \"string\",\n      \"date_published\": \"string\",\n      \"timestamp\": \"string\",\n      \"branch\": \"string\",\n      \"unit_name\": \"string\",\n      \"image\": \"string\",\n      \"thumbnail\": \"string\",\n      \"url\": \"string\",\n      \"credit\": [\n        {\n          \"key_0\": false\n        },\n        {\n          \"key_0\": \"string\",\n          \"key_1\": 5601\n        }\n      ],\n      \"location\": {\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"country\": \"string\"\n      },\n      \"rating\": 8286.652484441727,\n      \"virin\": \"string\",\n      \"duration\": 4,\n      \"aspect_ratio\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dc41e919-105b-418c-a99f-2b30a73b00a4",
+              "name": "Invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories_exclude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "to_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_image",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "has_captions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "50"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4205eb25-8484-44d3-84ce-f6b9c7cdd7d3",
+              "name": "Authentication issue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories_exclude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "to_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_image",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "has_captions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "50"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "be1a7d8d-af1b-43a1-acc6-5fc56dcf8e20",
+              "name": "Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "categories_exclude",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_publishdate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "to_duration",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "has_image",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "has_captions",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "50"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "839e2ef8-52f7-4b6c-9e36-7d15e6a1d72c",
+      "name": "Asset",
+      "description": {
+        "content": "Retrieve and relate individual assets",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "83fbf35c-882c-4fa8-bf74-f3038b17e13f",
+          "name": "Get asset",
+          "request": {
+            "name": "Get asset",
+            "description": {
+              "content": "Retrieve extended information about a specific media asset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "asset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "prettyprint",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumb_width",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumb_height",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "thumb_quality",
+                  "value": "95"
+                },
+                {
+                  "disabled": false,
+                  "key": "include_related_media",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9a7d609c-02e1-4e89-ae44-0429754b14a2",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "prettyprint",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "95"
+                    },
+                    {
+                      "key": "include_related_media",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"title\": \"string\",\n  \"description\": \"string\",\n  \"keywords\": \"string\",\n  \"date\": \"string\",\n  \"date_published\": \"string\",\n  \"timestamp\": \"string\",\n  \"branch\": \"string\",\n  \"unit_name\": \"string\",\n  \"image\": \"string\",\n  \"thumbnail\": \"string\",\n  \"url\": \"string\",\n  \"credit\": [\n    {\n      \"key_0\": 6134.616069253176,\n      \"key_1\": \"string\",\n      \"key_2\": \"string\",\n      \"key_3\": 1552.3642117892311\n    },\n    {\n      \"key_0\": false,\n      \"key_1\": false\n    }\n  ],\n  \"location\": {\n    \"city\": \"string\",\n    \"state\": \"string\",\n    \"country\": \"string\"\n  },\n  \"rating\": 28.158233260198173,\n  \"virin\": \"string\",\n  \"duration\": 7849,\n  \"aspect_ratio\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "856ea875-a389-45eb-8b4a-fa71acf60b96",
+              "name": "Invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "prettyprint",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "95"
+                    },
+                    {
+                      "key": "include_related_media",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6bd7865b-e86f-44db-86ee-9eab2956d5d4",
+              "name": "Missing or invalid API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "prettyprint",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "thumb_width",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_height",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "thumb_quality",
+                      "value": "95"
+                    },
+                    {
+                      "key": "include_related_media",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7fcfffc5-90a0-456c-aae6-f3c0b0966a7c",
+          "name": "Get related assets",
+          "request": {
+            "name": "Get related assets",
+            "description": {
+              "content": "Retrieve media assets related to a specified asset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "asset",
+                "related"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "branch",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "state",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "credit",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "from_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "to_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "aspect_ratio",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "hd",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max_results",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "920ef488-dcdb-4da6-898e-e06e34180558",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    "related"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"page_info\": {\n    \"total_results\": 5733,\n    \"results_per_page\": 6104\n  },\n  \"results\": [\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"keywords\": \"string\",\n      \"date\": \"string\",\n      \"date_published\": \"string\",\n      \"timestamp\": \"string\",\n      \"branch\": \"string\",\n      \"unit_name\": \"string\",\n      \"image\": \"string\",\n      \"thumbnail\": \"string\",\n      \"url\": \"string\",\n      \"credit\": [\n        {\n          \"key_0\": 1125,\n          \"key_1\": \"string\"\n        },\n        {\n          \"key_0\": \"string\",\n          \"key_1\": false,\n          \"key_2\": 676.9453450841067,\n          \"key_3\": 3978\n        }\n      ],\n      \"location\": {\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"country\": \"string\"\n      },\n      \"rating\": 1951.9330676014035,\n      \"virin\": \"string\",\n      \"duration\": 2788,\n      \"aspect_ratio\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"keywords\": \"string\",\n      \"date\": \"string\",\n      \"date_published\": \"string\",\n      \"timestamp\": \"string\",\n      \"branch\": \"string\",\n      \"unit_name\": \"string\",\n      \"image\": \"string\",\n      \"thumbnail\": \"string\",\n      \"url\": \"string\",\n      \"credit\": [\n        {\n          \"key_0\": false\n        },\n        {\n          \"key_0\": \"string\",\n          \"key_1\": 5601\n        }\n      ],\n      \"location\": {\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"country\": \"string\"\n      },\n      \"rating\": 8286.652484441727,\n      \"virin\": \"string\",\n      \"duration\": 4,\n      \"aspect_ratio\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5949413b-95cb-45a2-b596-1b1c2a747dda",
+              "name": "Invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    "related"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7bdb94c3-28d0-4103-b53c-2b598a7380b8",
+              "name": "Missing or invalid API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "asset",
+                    "related"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "credit",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "to_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "aspect_ratio",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "hd",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8b01819f-47ac-4112-a774-6b11749a29eb",
+      "name": "Unit",
+      "description": {
+        "content": "Search and retrieve military units",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74ea7a80-7cbb-410b-a680-6ca500c6b385",
+          "name": "Search units",
+          "request": {
+            "name": "Search units",
+            "description": {
+              "content": "Search the DVIDS unit directory by name, abbreviation, branch, or ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "unit",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_id",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "branch",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_abbrev",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "unit_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max_results",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sortdir",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b066fbd2-ad4b-49a2-8798-0e787b815cb8",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "unit",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_abbrev",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"page_info\": {\n    \"total_results\": 1971,\n    \"results_per_page\": 5887\n  },\n  \"results\": [\n    {\n      \"unit_id\": 1731,\n      \"unit_name\": \"string\",\n      \"unit_abbrev\": \"string\",\n      \"branch\": \"string\"\n    },\n    {\n      \"unit_id\": 3064,\n      \"unit_name\": \"string\",\n      \"unit_abbrev\": \"string\",\n      \"branch\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "06937307-a370-4e72-a174-2e0e881385b3",
+              "name": "Invalid parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "unit",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_abbrev",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b37fec7d-1170-4284-9f93-03e4e442d54c",
+              "name": "Missing or invalid API key",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "unit",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "branch",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_abbrev",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unit_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "max_results",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sortdir",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.dvidshub.net",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cb61c635-1f95-488a-add3-a42f94ba271c",
+    "name": "DVIDS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Defense Visual Information Distribution Service (DVIDS) API provides programmatic access to U.S. military news, photos, video, audio, publications, units, and live events. The API is implemented as JSON over HTTP and requires a public API key.\n\nContact Support:\n Name: DVIDS",
+      "type": "text/plain"
+    }
+  }
+}
