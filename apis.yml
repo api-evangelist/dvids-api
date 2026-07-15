@@ -42,6 +42,8 @@ apis:
       - type: OpenAPI
         url: openapi/dvids-api-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/dvids-api-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/dvids-api-vulnerability-disclosure.yml
   - type: DomainSecurity
