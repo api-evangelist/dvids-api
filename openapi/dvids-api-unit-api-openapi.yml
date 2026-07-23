@@ -1,0 +1,114 @@
+openapi: 3.1.0
+info:
+  title: DVIDS Asset Unit API
+  description: The Defense Visual Information Distribution Service (DVIDS) API provides programmatic access to U.S. military news, photos, video, audio, publications, units, and live events. The API is implemented as JSON over HTTP and requires a public API key.
+  version: v2
+  contact:
+    name: DVIDS
+    url: https://api.dvidshub.net/
+servers:
+- url: https://api.dvidshub.net
+  description: DVIDS API
+security:
+- apiKey: []
+tags:
+- name: Unit
+  description: Search and retrieve military units
+paths:
+  /unit/search:
+    get:
+      operationId: searchUnits
+      summary: Search units
+      description: Search the DVIDS unit directory by name, abbreviation, branch, or ID.
+      tags:
+      - Unit
+      parameters:
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: unit_id
+        in: query
+        schema:
+          type: integer
+      - name: branch
+        in: query
+        schema:
+          type: string
+      - name: unit_abbrev
+        in: query
+        schema:
+          type: string
+      - name: unit_name
+        in: query
+        schema:
+          type: string
+      - name: max_results
+        in: query
+        schema:
+          type: integer
+      - name: sortdir
+        in: query
+        schema:
+          type: string
+          enum:
+          - asc
+          - desc
+      - name: page
+        in: query
+        schema:
+          type: integer
+          default: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnitListResponse'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Missing or invalid API key
+components:
+  schemas:
+    PageInfo:
+      type: object
+      properties:
+        total_results:
+          type: integer
+        results_per_page:
+          type: integer
+    UnitListResponse:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            type: string
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Unit'
+    Unit:
+      type: object
+      properties:
+        unit_id:
+          type: integer
+        unit_name:
+          type: string
+        unit_abbrev:
+          type: string
+        branch:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
+externalDocs:
+  description: DVIDS API Documentation
+  url: https://api.dvidshub.net/docs

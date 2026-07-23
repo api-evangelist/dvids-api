@@ -1,0 +1,235 @@
+openapi: 3.1.0
+info:
+  title: DVIDS Asset API
+  description: The Defense Visual Information Distribution Service (DVIDS) API provides programmatic access to U.S. military news, photos, video, audio, publications, units, and live events. The API is implemented as JSON over HTTP and requires a public API key.
+  version: v2
+  contact:
+    name: DVIDS
+    url: https://api.dvidshub.net/
+servers:
+- url: https://api.dvidshub.net
+  description: DVIDS API
+security:
+- apiKey: []
+tags:
+- name: Asset
+  description: Retrieve and relate individual assets
+paths:
+  /asset:
+    get:
+      operationId: getAsset
+      summary: Get asset
+      description: Retrieve extended information about a specific media asset.
+      tags:
+      - Asset
+      parameters:
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        schema:
+          type: string
+      - name: prettyprint
+        in: query
+        schema:
+          type: boolean
+      - name: thumb_width
+        in: query
+        schema:
+          type: integer
+      - name: thumb_height
+        in: query
+        schema:
+          type: integer
+      - name: thumb_quality
+        in: query
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 100
+          default: 95
+      - name: include_related_media
+        in: query
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Asset'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Missing or invalid API key
+  /asset/related:
+    get:
+      operationId: getRelatedAssets
+      summary: Get related assets
+      description: Retrieve media assets related to a specified asset.
+      tags:
+      - Asset
+      parameters:
+      - name: api_key
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: branch
+        in: query
+        schema:
+          type: string
+      - name: category
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      - name: country
+        in: query
+        schema:
+          type: string
+      - name: state
+        in: query
+        schema:
+          type: string
+      - name: city
+        in: query
+        schema:
+          type: string
+      - name: unit_name
+        in: query
+        schema:
+          type: string
+      - name: credit
+        in: query
+        schema:
+          type: string
+      - name: from_date
+        in: query
+        schema:
+          type: string
+      - name: to_date
+        in: query
+        schema:
+          type: string
+      - name: aspect_ratio
+        in: query
+        schema:
+          type: string
+      - name: hd
+        in: query
+        schema:
+          type: integer
+      - name: max_results
+        in: query
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 50
+      - name: page
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssetListResponse'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Missing or invalid API key
+components:
+  schemas:
+    PageInfo:
+      type: object
+      properties:
+        total_results:
+          type: integer
+        results_per_page:
+          type: integer
+    AssetListResponse:
+      type: object
+      properties:
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Asset'
+    Asset:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        keywords:
+          type: string
+        date:
+          type: string
+        date_published:
+          type: string
+        timestamp:
+          type: string
+        branch:
+          type: string
+        unit_name:
+          type: string
+        image:
+          type: string
+        thumbnail:
+          type: string
+        url:
+          type: string
+        credit:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        location:
+          type: object
+          properties:
+            city:
+              type: string
+            state:
+              type: string
+            country:
+              type: string
+        rating:
+          type: number
+        virin:
+          type: string
+        duration:
+          type: integer
+        aspect_ratio:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
+externalDocs:
+  description: DVIDS API Documentation
+  url: https://api.dvidshub.net/docs
