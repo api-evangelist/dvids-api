@@ -5,9 +5,22 @@ description: >-
   military news, photos, video, audio, publications, and unit assets. The API is implemented as JSON over HTTP and
   integration is possible from any language that can make an HTTP request and parse JSON responses.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dvids-api.png
 tags:
   - Media
   - Defense
@@ -18,29 +31,60 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/dvids-api/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: dvids-api:dvids-api
-    name: DVIDS API
-    description: >-
-      JSON-over-HTTP API for searching and retrieving DVIDS news, video, image, audio, publication, webcast, graphics,
-      and unit records.
-    humanURL: https://api.dvidshub.net/
-    baseURL: https://api.dvidshub.net
-    tags:
-      - Media
-      - Defense
-      - Government
-      - Search
-    properties:
-      - type: Documentation
-        url: https://api.dvidshub.net/docs
-      - type: Asset API
-        url: https://api.dvidshub.net/docs/asset_api
-      - type: Search API
-        url: https://api.dvidshub.net/docs/search_api
-      - type: Unit API
-        url: https://api.dvidshub.net/docs/unit_api
-      - type: OpenAPI
-        url: openapi/dvids-api-openapi.yml
+- aid: dvids-api:dvids-api-asset-api
+  name: DVIDS API Asset API
+  description: Retrieve and relate individual assets
+  humanURL: https://api.dvidshub.net/
+  baseURL: https://api.dvidshub.net
+  tags:
+  - Asset
+  properties:
+  - type: OpenAPI
+    url: openapi/dvids-api-asset-api-openapi.yml
+  - type: Documentation
+    url: https://api.dvidshub.net/docs
+  - type: Asset API
+    url: https://api.dvidshub.net/docs/asset_api
+  - type: Search API
+    url: https://api.dvidshub.net/docs/search_api
+  - type: Unit API
+    url: https://api.dvidshub.net/docs/unit_api
+- aid: dvids-api:dvids-api-search-api
+  name: DVIDS API Search API
+  description: Full-text search across DVIDS assets
+  humanURL: https://api.dvidshub.net/
+  baseURL: https://api.dvidshub.net
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/dvids-api-search-api-openapi.yml
+  - type: Documentation
+    url: https://api.dvidshub.net/docs
+  - type: Asset API
+    url: https://api.dvidshub.net/docs/asset_api
+  - type: Search API
+    url: https://api.dvidshub.net/docs/search_api
+  - type: Unit API
+    url: https://api.dvidshub.net/docs/unit_api
+- aid: dvids-api:dvids-api-unit-api
+  name: DVIDS API Unit API
+  description: Search and retrieve military units
+  humanURL: https://api.dvidshub.net/
+  baseURL: https://api.dvidshub.net
+  tags:
+  - Unit
+  properties:
+  - type: OpenAPI
+    url: openapi/dvids-api-unit-api-openapi.yml
+  - type: Documentation
+    url: https://api.dvidshub.net/docs
+  - type: Asset API
+    url: https://api.dvidshub.net/docs/asset_api
+  - type: Search API
+    url: https://api.dvidshub.net/docs/search_api
+  - type: Unit API
+    url: https://api.dvidshub.net/docs/unit_api
 common:
   - type: AgenticAccess
     url: agentic-access/dvids-api-agentic-access.yml
