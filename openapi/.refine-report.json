@@ -1,0 +1,18 @@
+{
+  "provider": "dvids-api",
+  "sources": [
+    "dvids-api-asset-api-openapi.yml",
+    "dvids-api-search-api-openapi.yml",
+    "dvids-api-unit-api-openapi.yml"
+  ],
+  "outputs": [
+    "dvids-api-asset-api-openapi.yml",
+    "dvids-api-search-api-openapi.yml",
+    "dvids-api-unit-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

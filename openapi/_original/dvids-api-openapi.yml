@@ -1,0 +1,503 @@
+openapi: 3.1.0
+info:
+  title: DVIDS API
+  description: >-
+    The Defense Visual Information Distribution Service (DVIDS) API provides
+    programmatic access to U.S. military news, photos, video, audio,
+    publications, units, and live events. The API is implemented as JSON
+    over HTTP and requires a public API key.
+  version: 'v2'
+  contact:
+    name: DVIDS
+    url: https://api.dvidshub.net/
+externalDocs:
+  description: DVIDS API Documentation
+  url: https://api.dvidshub.net/docs
+servers:
+  - url: https://api.dvidshub.net
+    description: DVIDS API
+tags:
+  - name: Search
+    description: Full-text search across DVIDS assets
+  - name: Asset
+    description: Retrieve and relate individual assets
+  - name: Unit
+    description: Search and retrieve military units
+security:
+  - apiKey: []
+paths:
+  /search:
+    get:
+      operationId: searchAssets
+      summary: Search assets
+      description: Full text search across DVIDS news, video, image, audio, publications, webcasts, and graphics.
+      tags:
+        - Search
+      parameters:
+        - name: api_key
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: q
+          in: query
+          schema:
+            type: string
+        - name: branch
+          in: query
+          schema:
+            type: string
+            enum:
+              - Army
+              - Navy
+              - Air Force
+              - Marines
+              - Coast Guard
+              - Joint
+              - Civilian
+              - Space Force
+        - name: type
+          in: query
+          schema:
+            type: string
+            enum:
+              - news
+              - video
+              - image
+              - audio
+              - publication_issue
+              - webcast
+              - graphics
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: categories_exclude
+          in: query
+          schema:
+            type: string
+        - name: country
+          in: query
+          schema:
+            type: string
+        - name: state
+          in: query
+          schema:
+            type: string
+        - name: city
+          in: query
+          schema:
+            type: string
+        - name: unit_name
+          in: query
+          schema:
+            type: string
+        - name: unit
+          in: query
+          schema:
+            type: string
+        - name: unit_id
+          in: query
+          schema:
+            type: integer
+        - name: credit
+          in: query
+          schema:
+            type: string
+        - name: from_date
+          in: query
+          schema:
+            type: string
+        - name: to_date
+          in: query
+          schema:
+            type: string
+        - name: from_publishdate
+          in: query
+          schema:
+            type: string
+        - name: to_publishdate
+          in: query
+          schema:
+            type: string
+        - name: timestamp
+          in: query
+          schema:
+            type: string
+        - name: from_duration
+          in: query
+          schema:
+            type: integer
+        - name: to_duration
+          in: query
+          schema:
+            type: integer
+        - name: aspect_ratio
+          in: query
+          schema:
+            type: string
+        - name: hd
+          in: query
+          schema:
+            type: integer
+        - name: has_image
+          in: query
+          schema:
+            type: boolean
+        - name: has_captions
+          in: query
+          schema:
+            type: boolean
+        - name: max_results
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 50
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: sort
+          in: query
+          schema:
+            type: string
+        - name: sortdir
+          in: query
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+        - name: format
+          in: query
+          schema:
+            type: string
+            enum:
+              - json
+              - rss
+        - name: fields
+          in: query
+          schema:
+            type: string
+        - name: thumb_width
+          in: query
+          schema:
+            type: integer
+        - name: thumb_height
+          in: query
+          schema:
+            type: integer
+        - name: thumb_quality
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssetListResponse'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Authentication issue
+        '503':
+          description: Unavailable
+  /asset:
+    get:
+      operationId: getAsset
+      summary: Get asset
+      description: Retrieve extended information about a specific media asset.
+      tags:
+        - Asset
+      parameters:
+        - name: api_key
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+        - name: prettyprint
+          in: query
+          schema:
+            type: boolean
+        - name: thumb_width
+          in: query
+          schema:
+            type: integer
+        - name: thumb_height
+          in: query
+          schema:
+            type: integer
+        - name: thumb_quality
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 95
+        - name: include_related_media
+          in: query
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Asset'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Missing or invalid API key
+  /asset/related:
+    get:
+      operationId: getRelatedAssets
+      summary: Get related assets
+      description: Retrieve media assets related to a specified asset.
+      tags:
+        - Asset
+      parameters:
+        - name: api_key
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: branch
+          in: query
+          schema:
+            type: string
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: type
+          in: query
+          schema:
+            type: string
+        - name: country
+          in: query
+          schema:
+            type: string
+        - name: state
+          in: query
+          schema:
+            type: string
+        - name: city
+          in: query
+          schema:
+            type: string
+        - name: unit_name
+          in: query
+          schema:
+            type: string
+        - name: credit
+          in: query
+          schema:
+            type: string
+        - name: from_date
+          in: query
+          schema:
+            type: string
+        - name: to_date
+          in: query
+          schema:
+            type: string
+        - name: aspect_ratio
+          in: query
+          schema:
+            type: string
+        - name: hd
+          in: query
+          schema:
+            type: integer
+        - name: max_results
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+        - name: page
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssetListResponse'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Missing or invalid API key
+  /unit/search:
+    get:
+      operationId: searchUnits
+      summary: Search units
+      description: Search the DVIDS unit directory by name, abbreviation, branch, or ID.
+      tags:
+        - Unit
+      parameters:
+        - name: api_key
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: unit_id
+          in: query
+          schema:
+            type: integer
+        - name: branch
+          in: query
+          schema:
+            type: string
+        - name: unit_abbrev
+          in: query
+          schema:
+            type: string
+        - name: unit_name
+          in: query
+          schema:
+            type: string
+        - name: max_results
+          in: query
+          schema:
+            type: integer
+        - name: sortdir
+          in: query
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnitListResponse'
+        '400':
+          description: Invalid parameters
+        '403':
+          description: Missing or invalid API key
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: query
+      name: api_key
+  schemas:
+    PageInfo:
+      type: object
+      properties:
+        total_results:
+          type: integer
+        results_per_page:
+          type: integer
+    Asset:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        keywords:
+          type: string
+        date:
+          type: string
+        date_published:
+          type: string
+        timestamp:
+          type: string
+        branch:
+          type: string
+        unit_name:
+          type: string
+        image:
+          type: string
+        thumbnail:
+          type: string
+        url:
+          type: string
+        credit:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        location:
+          type: object
+          properties:
+            city:
+              type: string
+            state:
+              type: string
+            country:
+              type: string
+        rating:
+          type: number
+        virin:
+          type: string
+        duration:
+          type: integer
+        aspect_ratio:
+          type: string
+    AssetListResponse:
+      type: object
+      properties:
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Asset'
+    Unit:
+      type: object
+      properties:
+        unit_id:
+          type: integer
+        unit_name:
+          type: string
+        unit_abbrev:
+          type: string
+        branch:
+          type: string
+    UnitListResponse:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            type: string
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Unit'
