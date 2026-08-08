@@ -5,10 +5,10 @@
       "source": "https://www.dvidshub.net/rss/news",
       "feed_url": "https://www.dvidshub.net/rss/news",
       "title": "",
-      "saved": 0,
+      "saved": 2,
       "method": "feed"
     }
   ],
-  "fetched": "2026-08-01T15:49:00Z",
-  "post_count": 148
+  "fetched": "2026-08-06T14:08:46Z",
+  "post_count": 170
 }
