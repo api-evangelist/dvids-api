@@ -1,0 +1,172 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DVIDS Asset API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Asset",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dvidshub.net/asset",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "prettyprint",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_width",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_height",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "thumb_quality",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "include_related_media",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve extended information about a specific media asset."
+        },
+        {
+          "info": {
+            "name": "Get related assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dvidshub.net/asset/related",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "branch",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "unit_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "credit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "to_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "aspect_ratio",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "hd",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max_results",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve media assets related to a specified asset."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
