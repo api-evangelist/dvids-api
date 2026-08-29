@@ -5,6 +5,17 @@ description: >-
   military news, photos, video, audio, publications, and unit assets. The API is implemented as JSON over HTTP and
   integration is possible from any language that can make an HTTP request and parse JSON responses.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
