@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: DVIDS Asset API
   description: The Defense Visual Information Distribution Service (DVIDS) API provides programmatic access to U.S. military news, photos, video, audio, publications, units, and live events. The API is implemented as JSON over HTTP and requires a public API key.
@@ -167,15 +167,6 @@ components:
           type: integer
         results_per_page:
           type: integer
-    AssetListResponse:
-      type: object
-      properties:
-        page_info:
-          $ref: '#/components/schemas/PageInfo'
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/Asset'
     Asset:
       type: object
       properties:
@@ -225,6 +216,15 @@ components:
           type: integer
         aspect_ratio:
           type: string
+    AssetListResponse:
+      type: object
+      properties:
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Asset'
   securitySchemes:
     apiKey:
       type: apiKey
