@@ -160,13 +160,15 @@ paths:
           description: Missing or invalid API key
 components:
   schemas:
-    PageInfo:
+    AssetListResponse:
       type: object
       properties:
-        total_results:
-          type: integer
-        results_per_page:
-          type: integer
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Asset'
     Asset:
       type: object
       properties:
@@ -216,15 +218,13 @@ components:
           type: integer
         aspect_ratio:
           type: string
-    AssetListResponse:
+    PageInfo:
       type: object
       properties:
-        page_info:
-          $ref: '#/components/schemas/PageInfo'
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/Asset'
+        total_results:
+          type: integer
+        results_per_page:
+          type: integer
   securitySchemes:
     apiKey:
       type: apiKey

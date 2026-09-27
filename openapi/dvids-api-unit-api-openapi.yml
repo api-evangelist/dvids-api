@@ -73,13 +73,6 @@ paths:
           description: Missing or invalid API key
 components:
   schemas:
-    PageInfo:
-      type: object
-      properties:
-        total_results:
-          type: integer
-        results_per_page:
-          type: integer
     Unit:
       type: object
       properties:
@@ -91,6 +84,13 @@ components:
           type: string
         branch:
           type: string
+    PageInfo:
+      type: object
+      properties:
+        total_results:
+          type: integer
+        results_per_page:
+          type: integer
     UnitListResponse:
       type: object
       properties:
