@@ -197,6 +197,22 @@ paths:
           description: Unavailable
 components:
   schemas:
+    AssetListResponse:
+      type: object
+      properties:
+        page_info:
+          $ref: '#/components/schemas/PageInfo'
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Asset'
+    PageInfo:
+      type: object
+      properties:
+        total_results:
+          type: integer
+        results_per_page:
+          type: integer
     Asset:
       type: object
       properties:
@@ -246,22 +262,6 @@ components:
           type: integer
         aspect_ratio:
           type: string
-    AssetListResponse:
-      type: object
-      properties:
-        page_info:
-          $ref: '#/components/schemas/PageInfo'
-        results:
-          type: array
-          items:
-            $ref: '#/components/schemas/Asset'
-    PageInfo:
-      type: object
-      properties:
-        total_results:
-          type: integer
-        results_per_page:
-          type: integer
   securitySchemes:
     apiKey:
       type: apiKey
