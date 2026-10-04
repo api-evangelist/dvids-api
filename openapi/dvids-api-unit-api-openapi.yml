@@ -73,17 +73,6 @@ paths:
           description: Missing or invalid API key
 components:
   schemas:
-    Unit:
-      type: object
-      properties:
-        unit_id:
-          type: integer
-        unit_name:
-          type: string
-        unit_abbrev:
-          type: string
-        branch:
-          type: string
     PageInfo:
       type: object
       properties:
@@ -104,6 +93,17 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Unit'
+    Unit:
+      type: object
+      properties:
+        unit_id:
+          type: integer
+        unit_name:
+          type: string
+        unit_abbrev:
+          type: string
+        branch:
+          type: string
   securitySchemes:
     apiKey:
       type: apiKey
